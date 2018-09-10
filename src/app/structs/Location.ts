@@ -1,6 +1,6 @@
-export default class LocationClass {    
+export default interface Location {    
     city: string;
-    street: number;
-    State: number;
+    street: string;
+    state: string;
     zipCode: number;        
 }

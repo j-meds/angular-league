@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { League } from "../structs/League";
 
 @Component({
   selector: 'app-leagues',
@@ -7,23 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaguesComponent implements OnInit {
 
-  league = {
+  league: League = {
+    id: 1,
     sport: "basketball",
     name: "YMCA Adult League",
     Teams: 8,
     description: "YMCA Carlsbad",
     location: {
       city: "Carlsbad",
-      State: "CA",
-      zipCode: 92056,
-      street: "",
-    }   
+      state: "CA",
+      street: "foo",
+      zipCode: 92056
+    } 
   };
 
   constructor() { }
 
   ngOnInit() {
-    console.log("init");
+    console.log(this.league);
   }
 
 }
