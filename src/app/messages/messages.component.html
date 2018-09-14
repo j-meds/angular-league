@@ -1,0 +1,19 @@
+<div class="container">   
+    <div class="row">
+    <h4 class="col text-left">Messages:</h4>
+    <div class="col text-right">
+      <button class="btn btn-warning"
+      (click)="messageService.clear()">
+      Clear Log
+    </button>
+    </div>
+    
+    </div>
+    <div *ngIf="messageService.messages.length">
+    <ul class="list-group list-group-flush text-left">
+      <li class="list-group-item" 
+      *ngFor="let message of messageService.messages">
+        {{message}}
+      </li>
+    </ul>  </div>
+</div>

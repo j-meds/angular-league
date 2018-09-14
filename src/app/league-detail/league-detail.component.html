@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <div *ngIf="league">
+    <label>
+      Name:
+      <input class="form-control" [(ngModel)]="league.name" placeholder="name..">
+    </label>
+    <div>
+      <p>id: {{league.id}}</p>
+      <h5>{{league.name | uppercase}}</h5>
+    </div>
+  </div>
+</div>
