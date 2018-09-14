@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LeagueService } from "../league.service";
+
 import { League } from "../structs/League";
-import { LEAGUES } from "../mock-data/leagues";
 
 @Component({
   selector: 'app-leagues',
@@ -12,16 +13,22 @@ export class LeaguesComponent implements OnInit {
   leagues: League[];
   selectedLeague: League;
 
-  constructor() { }
+  // Initial lifecycle
+  constructor(private leagueService: LeagueService) { }
+
+  getHereos(): void {
+    this.leagueService.getLeagues()
+      .subscribe(leagues => this.leagues = leagues);
+  }
 
   ngOnInit() {
-    this.leagues = LEAGUES;
-    this.selectedLeague = new League();
+    this.getHereos();
     console.log(this.leagues);
   }
 
+  // Events
   onSelectLeague(league: League) {
-    console.log(League);
+    console.log(league);
     this.selectedLeague = league;
   }
 

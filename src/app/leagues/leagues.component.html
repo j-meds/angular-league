@@ -1,7 +1,7 @@
 <div class="container">
     <H2>My Leagues</H2>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md">
             <ul class="list-group">
                 <button class="list-group-item list-group-item-action" 
                 *ngFor="let league of leagues" 
@@ -12,18 +12,8 @@
                 </button>
             </ul>
         </div>
-
-        <div class="col-md-4">
-            <div class="jumbotron">
-                <label>
-                    Name:
-                    <input class="form-control" [(ngModel)]="selectedLeague.name" placeholder="name..">
-                </label>
-                <div *ngIf="selectedLeague.id">
-                    <p>id: {{selectedLeague.id}}</p>
-                    <h2>{{selectedLeague.name | uppercase}}</h2>                    
-                </div>
-            </div>
+        <div class="col-md">
+            <app-league-detail [league]="selectedLeague"></app-league-detail>
         </div>
     </div>
 </div>
