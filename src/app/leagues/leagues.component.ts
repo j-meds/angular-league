@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { League } from "../structs/League";
+import { LEAGUES } from "../mock-data/leagues";
 
 @Component({
   selector: 'app-leagues',
@@ -8,24 +9,20 @@ import { League } from "../structs/League";
 })
 export class LeaguesComponent implements OnInit {
 
-  league: League = {
-    id: 1,
-    sport: "basketball",
-    name: "YMCA Adult League",
-    Teams: 8,
-    description: "YMCA Carlsbad",
-    location: {
-      city: "Carlsbad",
-      state: "CA",
-      street: "foo",
-      zipCode: 92056
-    } 
-  };
+  leagues: League[];
+  selectedLeague: League;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.league);
+    this.leagues = LEAGUES;
+    this.selectedLeague = new League();
+    console.log(this.leagues);
+  }
+
+  onSelectLeague(league: League) {
+    console.log(League);
+    this.selectedLeague = league;
   }
 
 }

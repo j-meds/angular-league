@@ -8,7 +8,10 @@ export class League {
     name: string;
     Teams: number;
     description: string;
-    location: Location;
+    city: string;
+    street: string;
+    state: string;
+    zipCode: string; 
 
     // Methods...
 }
