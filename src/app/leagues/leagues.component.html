@@ -1,4 +1,4 @@
-<div class="container">
+<div>
     <H2>My Leagues</H2>
     <div class="row">
         <div class="col-md">
@@ -9,11 +9,10 @@
                 [class.active]="league === selectedLeague">
                     {{league.name}}
                     <span class="badge badge-info badge-pill">{{league.id}}</span>
+                    <button class="btn float-right"
+                        routerLink="/details/{{league.id}}">view details</button>
                 </button>
             </ul>
-        </div>
-        <div class="col-md">
-            <app-league-detail [league]="selectedLeague"></app-league-detail>
         </div>
     </div>
 </div>

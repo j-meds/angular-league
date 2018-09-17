@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LeaguesComponent } from './leagues/leagues.component';
 import { LeagueDetailComponent } from './league-detail/league-detail.component';
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 // Modules
 import { AppRoutingModule } from './/app-routing.module';
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './/app-routing.module';
     LeaguesComponent,
     LeagueDetailComponent,
     MessagesComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

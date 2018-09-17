@@ -28,7 +28,6 @@ export class LeaguesComponent implements OnInit {
 
   // Events
   onSelectLeague(league: League) {
-    console.log(league);
     this.selectedLeague = league;
   }
 

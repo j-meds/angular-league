@@ -1,12 +1,16 @@
-<div class="jumbotron">
+<div>
+  <div class="jumbotron">
+    <button class="btn btn-primary float-right"
+    (click)="goBack()">Go Back</button>
+    <br><br>
   <div *ngIf="league">
-    <label>
-      Name:
-      <input class="form-control" [(ngModel)]="league.name" placeholder="name..">
-    </label>
     <div>
-      <p>id: {{league.id}}</p>
-      <h5>{{league.name | uppercase}}</h5>
+      <h3>{{league.name | uppercase}}</h3>
+      <p><b>Address:</b> {{league.adress}} {{league.city}}, {{league.state}} {{league.zipCode}}</p>
+      <p><b>Sport:</b>{{league.sport}}</p>
+      <p><b>Team Size:</b>{{league.teams}}</p>
+      <p>{{league.description}}</p>    
     </div>
   </div>
+</div>
 </div>

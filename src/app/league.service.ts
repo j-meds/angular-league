@@ -17,4 +17,9 @@ export class LeagueService {
     this.messageService.add('LeagueService: fetched All leagues');
     return of(LEAGUES);
   }
+
+  getLeague(id: number): Observable<League> {
+    this.messageService.add(`LeagueService: fetched League id=${id}`);
+    return of(LEAGUES.find(league => league.id === id));
+  }
 }
